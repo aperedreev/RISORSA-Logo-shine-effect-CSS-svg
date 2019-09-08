@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RISORSA Logo shine effect CSS + svg</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="mask pseudo">
+  <a href="http://risorsa.ru">
+    <img src="images/risorsa-logo.png" alt="RISORSA logo" />
+  </a>
+</div>
+<p>Just hover over the logo.</p>  
+<svg height="0">
+  <!-- THE mask -->
+  <mask id="mask-firefox">
+    <image width="196" height="40" xlink:href="images/risorsa-logo.png" filter="url(#filter)" /> 
+  </mask>
+  <!-- the filter to make the image white -->
+  <filter id="filter">
+    <feFlood flood-color="white" />
+    <feComposite in2="SourceAlpha" operator="in" />
+  </filter>
+</svg>
+</body>
+</html>
